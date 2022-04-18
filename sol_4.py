@@ -1,5 +1,5 @@
 def solution(lottos, win_nums):
-    answer = []
+    answer = [1, 2, 3, 4, 5, 6, 6]
     zero = lottos.count(0)
     cnt = 0
 
@@ -7,17 +7,17 @@ def solution(lottos, win_nums):
         if i in win_nums:
             cnt += 1
         
-    max = 7 - cnt - zero 
-    min = 7 - cnt
+    max = 6 - cnt - zero 
+    min = 6 - cnt
 
-    if max == 7:
-        max = 6
-    if min == 7:
-        min = 6
+    # if max == 7:
+    #     max = 6
+    # if min == 7:
+    #     min = 6
 
-    answer = [max, min]
+    # answer = [max, min]
 
-    return answer
+    return answer[max], answer[min]
 
 print(solution([44, 1, 0, 0, 31, 25], [31, 10, 45, 1, 6, 19]))
 print(solution([0, 0, 0, 0, 0, 0], [38, 19, 20, 40, 15, 25]))
